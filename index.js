@@ -4,6 +4,10 @@ const app = express();
 
 app.use(cors());
 
+app.get("/", (req, res, next) => {
+  return res.send("Api Working");
+});
+
 const salaryData = {
   "questions": [
     {
@@ -44,7 +48,7 @@ app.get('/api/db', (req, res) => {
 
 
 // Start the server on the port specified in the environment variables
-const port = 8000; // Get the port number from environment variables
+const port = process.env.PORT || 8000; // Get the port number from environment variables
 app.listen(port, () => {
     // Log a message to the console when the server starts successfully
     console.log(`Server running on ${port}`); // Outputs the server's port and environment (e.g., development or production)
