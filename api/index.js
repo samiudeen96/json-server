@@ -47,11 +47,11 @@ app.get('/api/db', (req, res) => {
 });
 
 
-// Start the server on the port specified in the environment variables
-const port = process.env.PORT || 8000; // Get the port number from environment variables
+
+const port = process.env.PORT || 8000; 
 app.listen(port, () => {
-    // Log a message to the console when the server starts successfully
-    console.log(`Server running on ${port}`); // Outputs the server's port and environment (e.g., development or production)
+
+    console.log(`Server running on ${port}`); 
 });
 
 module.exports = app;

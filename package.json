@@ -1,16 +1,12 @@
+
 {
   "name": "json-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "git": "git add . && git commit -m 'update' && git push",
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "dev": "node api/index.js",
+    "git": "git add . && git commit -m 'update' && git push"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
