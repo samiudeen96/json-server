@@ -38,9 +38,16 @@ const salaryData = {
 };
 
 app.get('/api/db', (req, res) => {
-  res.json(salaryData);
   console.log("Server connected");
-  
+  res.json(salaryData);
+});
+
+
+// Start the server on the port specified in the environment variables
+const port = 8000; // Get the port number from environment variables
+app.listen(port, () => {
+    // Log a message to the console when the server starts successfully
+    console.log(`Server running on ${port}`); // Outputs the server's port and environment (e.g., development or production)
 });
 
 module.exports = app;

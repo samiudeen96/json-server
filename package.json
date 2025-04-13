@@ -5,7 +5,14 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon api/db.js"
+    "start": "nodemon api/db.js",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "git": "git add . && git commit -m 'update' && git push",
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
